@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salexandre10.github.io/da-terra-chips-de-banana/sitemap.xml
