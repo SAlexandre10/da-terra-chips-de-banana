@@ -18,15 +18,17 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; font-size: 120%; }
+html { scroll-behavior: smooth; font-size: 150%; }
 
 body {
   margin: 0;
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: var(--text);
   background: var(--cream);
-  line-height: 1.65;
+  line-height: 1.6;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 img { max-width: 100%; display: block; }
@@ -63,6 +65,7 @@ strong { color: var(--brown-dark); }
   padding: 5px 14px;
   border-radius: 999px;
   margin: 0 0 0.8em;
+  white-space: nowrap;
 }
 
 .eyebrow.center { display: table; margin-left: auto; margin-right: auto; }
@@ -82,7 +85,7 @@ strong { color: var(--brown-dark); }
 }
 
 .navbar-inner {
-  max-width: 1140px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 14px 24px;
   display: flex;
@@ -235,7 +238,7 @@ strong { color: var(--brown-dark); }
 
 .section-alt { background: var(--cream-alt); }
 
-.section-inner { max-width: 1140px; margin: 0 auto; }
+.section-inner { max-width: 1300px; margin: 0 auto; }
 
 .section h2 { font-size: clamp(2.1rem, 4.2vw, 3rem); }
 
@@ -331,7 +334,7 @@ strong { color: var(--brown-dark); }
 
 .product-card-inner {
   position: relative;
-  height: 360px;
+  height: 460px;
   transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -411,7 +414,7 @@ strong { color: var(--brown-dark); }
 }
 
 .stat span {
-  font-size: 1rem;
+  font-size: 1.35rem;
   color: var(--text-soft);
   font-weight: 700;
 }
@@ -565,7 +568,7 @@ strong { color: var(--brown-dark); }
   padding: 56px 24px 32px;
 }
 
-.footer-inner { max-width: 1140px; margin: 0 auto; text-align: center; }
+.footer-inner { max-width: 1300px; margin: 0 auto; text-align: center; }
 
 .footer-brand {
   display: flex;
@@ -649,6 +652,7 @@ strong { color: var(--brown-dark); }
 }
 
 @media (max-width: 720px) {
+  html { font-size: 125%; }
   .nav-links {
     position: fixed;
     top: 66px;
@@ -671,6 +675,8 @@ strong { color: var(--brown-dark); }
 }
 
 @media (max-width: 520px) {
+  html { font-size: 112%; }
+  .eyebrow { white-space: normal; }
   .product-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .btn { width: 100%; text-align: center; }
