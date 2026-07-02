@@ -649,10 +649,6 @@ strong { color: var(--brown-dark); }
   .find-grid { grid-template-columns: 1fr; }
   .find-card-wide { grid-column: span 1; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 720px) {
-  html { font-size: 125%; }
   .nav-links {
     position: absolute;
     top: 100%;
@@ -670,6 +666,10 @@ strong { color: var(--brown-dark); }
   .nav-links.open { transform: translateY(0); }
   .nav-cta { text-align: center; }
   .hamburger { display: flex; }
+}
+
+@media (max-width: 720px) {
+  html { font-size: 125%; }
   .hero { padding: 72px 20px 90px; }
   .section { padding: 64px 20px; }
 }
