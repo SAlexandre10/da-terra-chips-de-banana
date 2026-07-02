@@ -654,8 +654,8 @@ strong { color: var(--brown-dark); }
 @media (max-width: 720px) {
   html { font-size: 125%; }
   .nav-links {
-    position: fixed;
-    top: 66px;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--cream);
@@ -676,7 +676,7 @@ strong { color: var(--brown-dark); }
 
 @media (max-width: 520px) {
   html { font-size: 112%; }
-  .eyebrow { white-space: normal; }
+  .eyebrow { white-space: normal; border-radius: var(--radius); }
   .product-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .btn { width: 100%; text-align: center; }
