@@ -304,12 +304,12 @@ strong { color: var(--brown-dark); }
   width: 620px;
   height: 620px;
   background: radial-gradient(circle at 30% 30%, var(--yellow) 0%, rgba(245, 183, 41, 0) 70%);
-  opacity: 0.5;
+  opacity: 0.28;
   border-radius: 50%;
   top: -220px;
   right: -180px;
   z-index: 1;
-  filter: blur(10px);
+  filter: blur(18px);
   animation: blob-float 12s ease-in-out infinite;
 }
 
@@ -322,7 +322,7 @@ strong { color: var(--brown-dark); }
   bottom: -20%;
   border-radius: 50%;
   background: radial-gradient(circle at 60% 60%, var(--green) 0%, rgba(76, 112, 49, 0) 70%);
-  opacity: 0.55;
+  opacity: 0.3;
   animation: blob-float 16s ease-in-out infinite reverse;
 }
 
