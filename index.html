@@ -6,6 +6,13 @@
 <title>Da Terra Chips de Banana | Direto da roça, crocante até a última fatia</title>
 <meta name="description" content="Da Terra Chips de Banana, chips de banana artesanais feitos com ingredientes naturais e produtores locais. Conheça nossa história, produtos e onde encontrar.">
 <meta name="google-site-verification" content="MJUKT0c5emEUo-IfJW2PTr2lp_KRfVyvitqcaGlFuRY" />
+<script>
+(function () {
+  var stored = localStorage.getItem('da-terra-theme');
+  var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -27,9 +34,15 @@
       <a href="#onde-encontrar">Onde encontrar</a>
       <a href="#contato" class="nav-cta">Fale conosco</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 

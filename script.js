@@ -1,3 +1,20 @@
+// Alternância de tema claro/escuro
+const themeToggle = document.getElementById('themeToggle');
+themeToggle?.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('da-terra-theme', next);
+});
+
+// Navbar com sombra ao rolar
+const navbar = document.getElementById('navbar');
+const toggleNavbarScrolled = () => {
+  navbar?.classList.toggle('scrolled', window.scrollY > 10);
+};
+toggleNavbarScrolled();
+window.addEventListener('scroll', toggleNavbarScrolled, { passive: true });
+
 // Menu mobile
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
