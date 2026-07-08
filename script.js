@@ -20,11 +20,17 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
 hamburger?.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  const open = navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  hamburger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
 });
 
 navLinks?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    hamburger?.setAttribute('aria-label', 'Abrir menu');
+  });
 });
 
 // Revelar seções ao rolar
@@ -63,13 +69,22 @@ productCards.forEach((card) => {
   });
 });
 
-// Formulário de contato (sem backend configurado ainda)
+// Formulário de contato: encaminha para o WhatsApp da Da Terra
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
+const WHATSAPP_NUMBER = '5582996177313';
 
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
-  formNote.textContent = 'Mensagem pronta! Conecte este formulário a um serviço como Formspree para receber os envios por e-mail.';
+  const nome = document.getElementById('nome').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const mensagem = document.getElementById('mensagem').value.trim();
+
+  const texto = `Olá! Meu nome é ${nome} (${email}).\n\n${mensagem}`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;
+
+  formNote.textContent = 'Abrindo o WhatsApp para você enviar sua mensagem...';
+  window.open(url, '_blank', 'noopener');
   form.reset();
 });
 

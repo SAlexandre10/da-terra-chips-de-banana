@@ -21,6 +21,8 @@
 </head>
 <body>
 
+<a href="#topo" class="skip-link">Pular para o conteúdo</a>
+
 <header class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="#topo" class="logo">
@@ -39,7 +41,7 @@
         <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -65,7 +67,7 @@
     <div class="section-inner split">
       <div class="split-media">
         <div class="media-card media-card-photo">
-          <img src="imagens/estande-feira.jpg" alt="Estande da Da Terra Chips de Banana em uma feira">
+          <img src="imagens/estande-feira.jpg" alt="Estande da Da Terra Chips de Banana em uma feira" loading="lazy">
         </div>
       </div>
       <div class="split-text">
@@ -98,7 +100,7 @@
               <p>A receita clássica: banana verde fatiada fina, frita no ponto certo e temperada com um toque de sal.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/salgada.jpg" alt="Foto do sabor Salgada" class="product-photo" onerror="this.style.display='none'">
+              <img src="imagens/salgada.jpg" alt="Foto do sabor Salgada" class="product-photo" loading="lazy" onerror="this.parentElement.classList.add('photo-missing')">
             </div>
           </div>
         </article>
@@ -110,7 +112,7 @@
               <p>Bananas maduras, levemente adocicadas. Perfeito para o café da tarde.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/doce.jpg" alt="Foto do sabor Doce" class="product-photo" onerror="this.style.display='none'">
+              <img src="imagens/doce.jpg" alt="Foto do sabor Doce" class="product-photo" loading="lazy" onerror="this.parentElement.classList.add('photo-missing')">
             </div>
           </div>
         </article>
@@ -122,7 +124,7 @@
               <p>Toque defumado e levemente picante da páprica, para quem gosta de um sabor mais marcante.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/paprica-defumada.jpg" alt="Foto do sabor Páprica Defumada" class="product-photo" onerror="this.style.display='none'">
+              <img src="imagens/paprica-defumada.jpg" alt="Foto do sabor Páprica Defumada" class="product-photo" loading="lazy" onerror="this.parentElement.classList.add('photo-missing')">
             </div>
           </div>
         </article>
@@ -134,7 +136,7 @@
               <p>Um toque de pimenta que transforma o chips clássico em petisco perfeito para acompanhar bebidas.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/apimentada.jpg" alt="Foto do sabor Apimentada" class="product-photo" onerror="this.style.display='none'">
+              <img src="imagens/apimentada.jpg" alt="Foto do sabor Apimentada" class="product-photo" loading="lazy" onerror="this.parentElement.classList.add('photo-missing')">
             </div>
           </div>
         </article>
@@ -165,7 +167,7 @@
       </div>
       <div class="split-media">
         <div class="media-card media-card-photo">
-          <img src="imagens/equipe-feira.jpg" alt="Equipe Da Terra apresentando os chips de banana em uma feira">
+          <img src="imagens/equipe-feira.jpg" alt="Equipe Da Terra apresentando os chips de banana em uma feira" loading="lazy">
         </div>
       </div>
     </div>
@@ -175,7 +177,7 @@
     <div class="section-inner split">
       <div class="split-media">
         <div class="media-card media-card-photo">
-          <img src="imagens/sustentabilidade.svg" alt="Ilustração de folhas de bananeira nascendo da terra">
+          <img src="imagens/sustentabilidade.svg" alt="Ilustração de folhas de bananeira nascendo da terra" loading="lazy">
         </div>
       </div>
       <div class="split-text">
@@ -228,9 +230,9 @@
         <p class="eyebrow center">Nos pratos dos nossos parceiros</p>
         <h3 class="center">Também presente em cardápios assinados</h3>
         <div class="gallery-grid">
-          <img src="imagens/parceiro-prato-1.jpg" alt="Prato gourmet com chips de banana Da Terra em restaurante parceiro">
-          <img src="imagens/parceiro-prato-2.jpg" alt="Prato com frango empanado e chips de banana Da Terra em restaurante parceiro">
-          <img src="imagens/parceiro-prato-3.jpg" alt="Chips de banana Da Terra servidos em buffet de evento parceiro">
+          <img src="imagens/parceiro-prato-1.jpg" alt="Prato gourmet com chips de banana Da Terra em restaurante parceiro" loading="lazy">
+          <img src="imagens/parceiro-prato-2.jpg" alt="Prato com frango empanado e chips de banana Da Terra em restaurante parceiro" loading="lazy">
+          <img src="imagens/parceiro-prato-3.jpg" alt="Chips de banana Da Terra servidos em buffet de evento parceiro" loading="lazy">
         </div>
       </div>
     </div>
