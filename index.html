@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#FFF8E9">
 <title>Da Terra Chips de Banana | Direto da roça, crocante até a última fatia</title>
 <meta name="description" content="Da Terra Chips de Banana, chips de banana artesanais feitos com ingredientes naturais e produtores locais. Conheça nossa história, produtos e onde encontrar.">
 <meta name="google-site-verification" content="MJUKT0c5emEUo-IfJW2PTr2lp_KRfVyvitqcaGlFuRY" />
@@ -23,13 +26,7 @@
 <meta name="twitter:title" content="Da Terra Chips de Banana | Direto da roça, crocante até a última fatia">
 <meta name="twitter:description" content="Chips de banana artesanais feitos com ingredientes naturais e produtores locais.">
 <meta name="twitter:image" content="https://salexandre10.github.io/da-terra-chips-de-banana/imagens/og-image.jpg">
-<script>
-(function () {
-  var stored = localStorage.getItem('da-terra-theme');
-  var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
-})();
-</script>
+<script src="theme-init.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -37,8 +34,15 @@
 <link rel="preload" as="image" href="logo.jpg">
 <link rel="preload" as="image" href="imagens/estande-feira.jpg">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
 </head>
 <body>
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false">
+  <symbol id="icon-whatsapp" viewBox="0 0 32 32"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15c0 2.379.703 4.593 1.912 6.451L4 29l7.738-1.878A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6c-1.98 0-3.83-.55-5.41-1.51l-.388-.23-4.59 1.114 1.135-4.47-.253-.406A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.293-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.703-.84-1.967-.936-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.317-1.43-.856-.763-1.434-1.706-1.602-1.994-.168-.288-.018-.444.126-.588.13-.129.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.563-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.347.687.297 1.223.474 1.641.606.689.219 1.316.188 1.812.114.553-.083 1.703-.696 1.943-1.368.24-.672.24-1.248.168-1.368-.072-.12-.264-.192-.552-.336z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></g></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></g></symbol>
+</svg>
 
 <a href="#topo" class="skip-link">Pular para o conteúdo</a>
 
@@ -47,7 +51,7 @@
     <a href="#topo" class="logo">
       <img src="logo.jpg" alt="Da Terra Chips de Banana" class="logo-img" width="150" height="150" fetchpriority="high">
     </a>
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks" aria-label="Menu principal">
       <a href="#sobre">Sobre</a>
       <a href="#produtos">Produtos</a>
       <a href="#qualidade">Qualidade</a>
@@ -56,11 +60,11 @@
       <a href="#contato" class="nav-cta">Fale conosco</a>
     </nav>
     <div class="navbar-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Modo escuro" aria-pressed="false">
+        <svg class="icon-sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <svg class="icon-moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -72,7 +76,7 @@
   <section class="hero">
     <div class="hero-inner">
       <p class="eyebrow">Chips de banana artesanais</p>
-      <h1>Da terra pra sua mesa,<br>em cada fatia crocante.</h1>
+      <h1>Da terra pra sua mesa,<br class="br-wide"> em cada fatia crocante.</h1>
       <p class="hero-sub">Feitos com bananas selecionadas de produtores locais, <span class="highlight">sem conservantes</span> e com o sabor de verdade que só o processo artesanal entrega.</p>
       <div class="hero-actions">
         <a href="#produtos" class="btn btn-primary">Conheça os produtos</a>
@@ -109,53 +113,53 @@
       <h2 class="center">Produtos</h2>
       <p class="section-lead center">Sabores para todo momento, do lanche da tarde à mesa de festa.</p>
 
-      <p class="flip-hint center">Clique em um sabor para ver a foto</p>
+      <p class="flip-hint center">Toque ou clique em um sabor para ver a foto</p>
       <div class="product-grid">
         <article class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
-              <div class="product-thumb thumb-original">🍌</div>
+              <div class="product-thumb thumb-original" aria-hidden="true">🍌</div>
               <h3>Salgada</h3>
               <p>A receita clássica: banana verde fatiada fina, frita no ponto certo e temperada com um toque de sal.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/salgada.jpg" alt="Foto do sabor Salgada" class="product-photo" loading="lazy" width="1204" height="1600" onerror="this.parentElement.classList.add('photo-missing')">
+              <img src="imagens/salgada.jpg" alt="Foto do sabor Salgada" class="product-photo" loading="lazy" width="1204" height="1600">
             </div>
           </div>
         </article>
         <article class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
-              <div class="product-thumb thumb-sweet">🍯</div>
+              <div class="product-thumb thumb-sweet" aria-hidden="true">🍯</div>
               <h3>Doce</h3>
               <p>Bananas maduras, levemente adocicadas. Perfeito para o café da tarde.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/doce.jpg" alt="Foto do sabor Doce" class="product-photo" loading="lazy" width="1204" height="1600" onerror="this.parentElement.classList.add('photo-missing')">
+              <img src="imagens/doce.jpg" alt="Foto do sabor Doce" class="product-photo" loading="lazy" width="1204" height="1600">
             </div>
           </div>
         </article>
         <article class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
-              <div class="product-thumb thumb-natural">🔥</div>
+              <div class="product-thumb thumb-natural" aria-hidden="true">🔥</div>
               <h3>Páprica Defumada</h3>
               <p>Toque defumado e levemente picante da páprica, para quem gosta de um sabor mais marcante.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/paprica-defumada.jpg" alt="Foto do sabor Páprica Defumada" class="product-photo" loading="lazy" width="1204" height="1600" onerror="this.parentElement.classList.add('photo-missing')">
+              <img src="imagens/paprica-defumada.jpg" alt="Foto do sabor Páprica Defumada" class="product-photo" loading="lazy" width="1204" height="1600">
             </div>
           </div>
         </article>
         <article class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
-              <div class="product-thumb thumb-spicy">🌶️</div>
+              <div class="product-thumb thumb-spicy" aria-hidden="true">🌶️</div>
               <h3>Apimentada</h3>
               <p>Um toque de pimenta que transforma o chips clássico em petisco perfeito para acompanhar bebidas.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/apimentada.jpg" alt="Foto do sabor Apimentada" class="product-photo" loading="lazy" width="1204" height="1600" onerror="this.parentElement.classList.add('photo-missing')">
+              <img src="imagens/apimentada.jpg" alt="Foto do sabor Apimentada" class="product-photo" loading="lazy" width="1204" height="1600">
             </div>
           </div>
         </article>
@@ -266,18 +270,19 @@
         <ul class="contact-list">
           <li>
             <a class="contact-link" href="https://wa.me/5582996177313" target="_blank" rel="noopener">
-              <span class="social-icon">
-                <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.379.703 4.593 1.912 6.451L4 29l7.738-1.878A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6c-1.98 0-3.83-.55-5.41-1.51l-.388-.23-4.59 1.114 1.135-4.47-.253-.406A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.293-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.703-.84-1.967-.936-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.317-1.43-.856-.763-1.434-1.706-1.602-1.994-.168-.288-.018-.444.126-.588.13-.129.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.563-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.347.687.297 1.223.474 1.641.606.689.219 1.316.188 1.812.114.553-.083 1.703-.696 1.943-1.368.24-.672.24-1.248.168-1.368-.072-.12-.264-.192-.552-.336z"/></svg>
-              </span>
+              <span class="social-icon"><svg aria-hidden="true" focusable="false" width="22" height="22"><use href="#icon-whatsapp"/></svg></span>
               <span><strong>WhatsApp:</strong> (82) 99617-7313</span>
             </a>
           </li>
-          <li><strong>E-mail:</strong> contato@daterrachips.com.br</li>
+          <li>
+            <span class="contact-link contact-item">
+              <span class="social-icon"><svg aria-hidden="true" focusable="false" width="22" height="22"><use href="#icon-mail"/></svg></span>
+              <span><strong>E-mail:</strong> contato@daterrachips.com.br</span>
+            </span>
+          </li>
           <li>
             <a class="contact-link" href="https://www.instagram.com/da_terra.ac/" target="_blank" rel="noopener">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
-              </span>
+              <span class="social-icon"><svg aria-hidden="true" focusable="false" width="22" height="22"><use href="#icon-instagram"/></svg></span>
               <span><strong>Instagram:</strong> @da_terra.ac</span>
             </a>
           </li>
@@ -290,13 +295,13 @@
         </div>
 
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+        <input type="text" id="nome" name="nome" required maxlength="80" autocomplete="name" placeholder="Seu nome">
 
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        <input type="email" id="email" name="email" required maxlength="120" autocomplete="email" placeholder="seu@email.com">
 
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+        <textarea id="mensagem" name="mensagem" rows="4" required maxlength="1500" placeholder="Como podemos ajudar?"></textarea>
 
         <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
         <p class="form-note" id="formNote" aria-live="polite"></p>
@@ -312,7 +317,7 @@
   target="_blank"
   rel="noopener"
 >
-  <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.379.703 4.593 1.912 6.451L4 29l7.738-1.878A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6c-1.98 0-3.83-.55-5.41-1.51l-.388-.23-4.59 1.114 1.135-4.47-.253-.406A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.293-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.703-.84-1.967-.936-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.317-1.43-.856-.763-1.434-1.706-1.602-1.994-.168-.288-.018-.444.126-.588.13-.129.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.563-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.347.687.297 1.223.474 1.641.606.689.219 1.316.188 1.812.114.553-.083 1.703-.696 1.943-1.368.24-.672.24-1.248.168-1.368-.072-.12-.264-.192-.552-.336z"/></svg>
+  <svg aria-hidden="true" focusable="false" width="28" height="28"><use href="#icon-whatsapp"/></svg>
   <span class="whatsapp-fab-label">Fale no WhatsApp</span>
 </a>
 
@@ -322,19 +327,20 @@
       <img src="logo.jpg" alt="Da Terra Chips de Banana" class="footer-logo-img" width="150" height="150" loading="lazy">
     </div>
     <p class="footer-tagline">Chips de banana artesanais, direto da roça pra sua mesa.</p>
-    <div class="footer-links">
+    <nav class="footer-links" aria-label="Links do rodapé">
       <a href="#sobre">Sobre</a>
       <a href="#produtos">Produtos</a>
       <a href="#qualidade">Qualidade</a>
       <a href="#sustentabilidade">Sustentabilidade</a>
+      <a href="#onde-encontrar">Onde encontrar</a>
       <a href="#contato">Contato</a>
-    </div>
+    </nav>
     <div class="footer-social">
       <a href="https://www.instagram.com/da_terra.ac/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+        <svg aria-hidden="true" focusable="false" width="20" height="20"><use href="#icon-instagram"/></svg>
       </a>
       <a href="https://wa.me/5582996177313" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.379.703 4.593 1.912 6.451L4 29l7.738-1.878A11.94 11.94 0 0 0 16.001 27C22.628 27 28 21.627 28 15S22.628 3 16.001 3zm0 21.6c-1.98 0-3.83-.55-5.41-1.51l-.388-.23-4.59 1.114 1.135-4.47-.253-.406A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.293-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.703-.84-1.967-.936-.264-.096-.456-.144-.648.144-.192.288-.744.936-.912 1.128-.168.192-.336.216-.624.072-.288-.144-1.216-.448-2.317-1.43-.856-.763-1.434-1.706-1.602-1.994-.168-.288-.018-.444.126-.588.13-.129.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.563-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.347.687.297 1.223.474 1.641.606.689.219 1.316.188 1.812.114.553-.083 1.703-.696 1.943-1.368.24-.672.24-1.248.168-1.368-.072-.12-.264-.192-.552-.336z"/></svg>
+        <svg aria-hidden="true" focusable="false" width="20" height="20"><use href="#icon-whatsapp"/></svg>
       </a>
     </div>
     <p class="footer-copy">&copy; <span id="year"></span> Da Terra Chips de Banana. Todos os direitos reservados.</p>
