@@ -142,3 +142,17 @@ form?.addEventListener('submit', (e) => {
 // Ano do rodapé
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Mapa dos parceiros: tocar num parceiro mostra o local no mapa
+const partnerMap = document.getElementById('partnerMap');
+const mapPlaces = document.querySelectorAll('.map-place');
+
+if (partnerMap) {
+  mapPlaces.forEach((place) => {
+    place.addEventListener('click', (e) => {
+      e.preventDefault();
+      partnerMap.src = 'https://www.google.com/maps?q=' + encodeURIComponent(place.dataset.query) + '&output=embed';
+      mapPlaces.forEach((p) => p.setAttribute('aria-pressed', p === place ? 'true' : 'false'));
+    });
+  });
+}

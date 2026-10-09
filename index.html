@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 <link rel="preload" as="image" href="logo.jpg">
 <link rel="preload" as="image" href="imagens/estande-feira.jpg">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
@@ -251,6 +251,31 @@
         </div>
       </div>
 
+      <div class="partner-map">
+        <div class="partner-map-list">
+          <h3>Veja no mapa</h3>
+          <p>Toque num parceiro pra ver onde fica.</p>
+          <h4>Pontos de revenda</h4>
+          <ul class="map-places">
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%20Ponta%20Verde%2C%20Macei%C3%B3%20-%20AL" data-query="Ferreti Ponta Verde, Maceió - AL" aria-pressed="true" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Ferreti Ponta Verde</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL" data-query="Ferreti Jatiúca, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Ferreti Jatiúca</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Panifica%C3%A7%C3%A3o%20Almeida%2C%20Gruta%20de%20Lourdes%2C%20Macei%C3%B3%20-%20AL" data-query="Panificação Almeida, Gruta de Lourdes, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Panificação Almeida</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Shopping%20Partage%20Arapiraca%2C%20Arapiraca%20-%20AL" data-query="Shopping Partage Arapiraca, Arapiraca - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Shopping Partage Arapiraca</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Mercado%20das%20Artes%2031%2C%20Jaragu%C3%A1%2C%20Macei%C3%B3%20-%20AL" data-query="Mercado das Artes 31, Jaraguá, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Mercado das Artes 31</a></li>
+          </ul>
+          <h4>Parceiros gastronômicos</h4>
+          <ul class="map-places">
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Maravela%2C%20Paju%C3%A7ara%2C%20Macei%C3%B3%20-%20AL" data-query="Restaurante Maravela, Pajuçara, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Restaurante Maravela</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Bistr%C3%B4%20Kare%C3%B3uka%2C%20Cruz%20das%20Almas%2C%20Macei%C3%B3%20-%20AL" data-query="Bistrô Kareóuka, Cruz das Almas, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Bistrô Kareóuka</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20Mercure%20Paju%C3%A7ara%2C%20Macei%C3%B3%20-%20AL" data-query="Hotel Mercure Pajuçara, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Hotel Mercure Pajuçara</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Buffet%20Rose%20Santos%2C%20Macei%C3%B3%20-%20AL" data-query="Buffet Rose Santos, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Buffet Rose Santos</a></li>
+          </ul>
+        </div>
+        <div class="partner-map-frame">
+          <iframe id="partnerMap" src="https://www.google.com/maps?q=Ferreti%20Ponta%20Verde%2C%20Macei%C3%B3%20-%20AL&amp;output=embed" title="Mapa dos parceiros da Da Terra" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+
       <div class="partner-gallery">
         <p class="eyebrow center">Nos pratos dos nossos parceiros</p>
         <h3 class="center">Também presente em cardápios assinados</h3>
@@ -318,8 +343,8 @@
   </section>
 
   <section id="avaliacoes" class="section section-reviews">
-    <div class="section-inner split">
-      <div class="split-text">
+    <div class="section-inner review-inner">
+      <div>
         <p class="eyebrow">Avaliações</p>
         <h2>Avalie nossos chips</h2>
         <p>Provou e gostou? Deixe sua avaliação no Google. Leva menos de um minuto e ajuda muita gente a conhecer a Da Terra.</p>
@@ -331,9 +356,6 @@
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Da%20Terra%20Chips%20de%20Banana" target="_blank" rel="noopener" aria-label="5 estrelas"><svg aria-hidden="true" focusable="false" width="40" height="40"><use href="#icon-star"/></svg></a>
         </div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Da%20Terra%20Chips%20de%20Banana" class="btn btn-primary" target="_blank" rel="noopener">Avaliar no Google</a>
-      </div>
-      <div class="review-map">
-        <iframe src="https://www.google.com/maps?q=Da%20Terra%20Chips%20de%20Banana&amp;output=embed" title="Da Terra Chips de Banana no Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -377,6 +399,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
