@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; frame-src https://www.google.com https://maps.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#FFF8E9">
 <title>Da Terra Chips de Banana | Direto da roça, crocante até a última fatia</title>
@@ -27,14 +27,33 @@
 <meta name="twitter:description" content="Chips de banana artesanais feitos com ingredientes naturais e produtores locais.">
 <meta name="twitter:image" content="https://daterrachips.com.br/imagens/og-image.jpg">
 <script src="theme-init.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
-<link rel="preload" as="image" href="logo.jpg">
-<link rel="preload" as="image" href="imagens/estande-feira.jpg">
+<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=9">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
 <link rel="apple-touch-icon" href="logo.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Da Terra Chips de Banana",
+  "alternateName": "Da Terra Chips",
+  "url": "https://daterrachips.com.br/",
+  "logo": "https://daterrachips.com.br/logo.jpg",
+  "image": "https://daterrachips.com.br/imagens/og-image.jpg",
+  "description": "Chips de banana artesanais feitos com ingredientes naturais e produtores locais, vendidos em feiras e pontos parceiros em Alagoas.",
+  "email": "daterra.ac23@gmail.com",
+  "telephone": "+55-82-98117-7313",
+  "areaServed": { "@type": "State", "name": "Alagoas" },
+  "sameAs": ["https://www.instagram.com/da_terra.ac/"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-82-98117-7313",
+    "contactType": "customer service",
+    "availableLanguage": "Portuguese"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -77,12 +96,23 @@
 
   <section class="hero">
     <div class="hero-inner">
+      <div class="hero-text">
       <p class="eyebrow">Chips de banana artesanais</p>
       <h1>Da terra pra sua mesa,<br class="br-wide"> em cada fatia crocante.</h1>
       <p class="hero-sub">Feitos com bananas selecionadas de produtores locais, <span class="highlight">sem conservantes</span> e com o sabor de verdade que só o processo artesanal entrega.</p>
       <div class="hero-actions">
         <a href="#produtos" class="btn btn-primary">Conheça os produtos</a>
         <a href="#contato" class="btn btn-ghost">Fale conosco</a>
+      </div>
+      </div>
+      <div class="hero-media">
+        <figure class="hero-photo hero-photo-main">
+          <img src="imagens/parceiro-prato-2-600.webp" srcset="imagens/parceiro-prato-2-600.webp 600w, imagens/parceiro-prato-2-1000.webp 1000w" sizes="(max-width: 900px) 250px, 350px" alt="Prato com frango empanado e chips de banana Da Terra" width="600" height="800" fetchpriority="high">
+        </figure>
+        <figure class="hero-photo hero-photo-pack">
+          <img src="imagens/salgada-600.webp" srcset="imagens/salgada-600.webp 600w, imagens/salgada-1000.webp 1000w" sizes="(max-width: 900px) 150px, 210px" alt="Pote de chips de banana Da Terra, sabor Salgada" width="600" height="797">
+        </figure>
+        <p class="hero-badge"><strong>100%</strong> natural</p>
       </div>
     </div>
     <div class="hero-blob" aria-hidden="true"></div>
@@ -92,7 +122,7 @@
     <div class="section-inner split">
       <div class="split-media">
         <div class="media-card media-card-photo">
-          <img src="imagens/estande-feira.jpg" alt="Estande da Da Terra Chips de Banana em uma feira" width="1100" height="1462" fetchpriority="high">
+          <img src="imagens/estande-feira-600.webp" srcset="imagens/estande-feira-600.webp 600w, imagens/estande-feira-1000.webp 1000w" sizes="(max-width: 900px) 360px, 540px" alt="Estande da Da Terra Chips de Banana em uma feira" width="1000" height="1329" loading="lazy">
         </div>
       </div>
       <div class="split-text">
@@ -117,7 +147,7 @@
 
       <p class="flip-hint center">Toque ou clique em um sabor para ver a foto</p>
       <div class="product-grid">
-        <article class="product-card" tabindex="0" role="button" aria-pressed="false">
+        <div class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
               <div class="product-thumb thumb-original" aria-hidden="true"><img src="imagens/sabor-salgada.svg" alt="" width="96" height="96"></div>
@@ -125,11 +155,11 @@
               <p>A receita clássica: banana verde fatiada fina, frita no ponto certo e temperada com um toque de sal.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/salgada.jpg" alt="Foto do sabor Salgada" class="product-photo" loading="lazy" width="1204" height="1600">
+              <img src="imagens/salgada-600.webp" srcset="imagens/salgada-600.webp 600w, imagens/salgada-1000.webp 1000w" sizes="(max-width: 900px) 50vw, 300px" alt="Foto do sabor Salgada" class="product-photo" loading="lazy" width="1000" height="1329">
             </div>
           </div>
-        </article>
-        <article class="product-card" tabindex="0" role="button" aria-pressed="false">
+        </div>
+        <div class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
               <div class="product-thumb thumb-sweet" aria-hidden="true"><img src="imagens/sabor-doce.svg" alt="" width="96" height="96"></div>
@@ -137,11 +167,11 @@
               <p>Bananas maduras, levemente adocicadas. Perfeito para o café da tarde.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/doce.jpg" alt="Foto do sabor Doce" class="product-photo" loading="lazy" width="1204" height="1600">
+              <img src="imagens/doce-600.webp" srcset="imagens/doce-600.webp 600w, imagens/doce-1000.webp 1000w" sizes="(max-width: 900px) 50vw, 300px" alt="Foto do sabor Doce" class="product-photo" loading="lazy" width="1000" height="1329">
             </div>
           </div>
-        </article>
-        <article class="product-card" tabindex="0" role="button" aria-pressed="false">
+        </div>
+        <div class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
               <div class="product-thumb thumb-natural" aria-hidden="true"><img src="imagens/sabor-paprica.svg" alt="" width="96" height="96"></div>
@@ -149,11 +179,11 @@
               <p>Toque defumado e levemente picante da páprica, para quem gosta de um sabor mais marcante.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/paprica-defumada.jpg" alt="Foto do sabor Páprica Defumada" class="product-photo" loading="lazy" width="1204" height="1600">
+              <img src="imagens/paprica-defumada-600.webp" srcset="imagens/paprica-defumada-600.webp 600w, imagens/paprica-defumada-1000.webp 1000w" sizes="(max-width: 900px) 50vw, 300px" alt="Foto do sabor Páprica Defumada" class="product-photo" loading="lazy" width="1000" height="1329">
             </div>
           </div>
-        </article>
-        <article class="product-card" tabindex="0" role="button" aria-pressed="false">
+        </div>
+        <div class="product-card" tabindex="0" role="button" aria-pressed="false">
           <div class="product-card-inner">
             <div class="product-card-face product-card-front">
               <div class="product-thumb thumb-spicy" aria-hidden="true"><img src="imagens/sabor-apimentada.svg" alt="" width="96" height="96"></div>
@@ -161,10 +191,10 @@
               <p>Um toque de pimenta que transforma o chips clássico em petisco perfeito para acompanhar bebidas.</p>
             </div>
             <div class="product-card-face product-card-back">
-              <img src="imagens/apimentada.jpg" alt="Foto do sabor Apimentada" class="product-photo" loading="lazy" width="1204" height="1600">
+              <img src="imagens/apimentada-600.webp" srcset="imagens/apimentada-600.webp 600w, imagens/apimentada-1000.webp 1000w" sizes="(max-width: 900px) 50vw, 300px" alt="Foto do sabor Apimentada" class="product-photo" loading="lazy" width="1000" height="1329">
             </div>
           </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -192,7 +222,7 @@
       </div>
       <div class="split-media">
         <div class="media-card media-card-photo">
-          <img src="imagens/equipe-feira.jpg" alt="Equipe Da Terra apresentando os chips de banana em uma feira" loading="lazy" width="1080" height="1435">
+          <img src="imagens/equipe-feira-600.webp" srcset="imagens/equipe-feira-600.webp 600w, imagens/equipe-feira-1000.webp 1000w" sizes="(max-width: 900px) 360px, 660px" alt="Equipe Da Terra apresentando os chips de banana em uma feira" loading="lazy" width="1000" height="1329">
         </div>
       </div>
     </div>
@@ -219,7 +249,7 @@
       <p class="eyebrow center">Onde encontrar</p>
       <h2 class="center">Encontre a Da Terra nas feiras e pontos parceiros</h2>
       <p class="section-lead center">Nossa base é nas feiras de Alagoas, mas também levamos a Da Terra para feiras itinerantes e pontos de venda parceiros.</p>
-      <div class="find-grid find-grid-4">
+      <div class="find-grid find-grid-3">
         <div class="find-card">
           <h3>Feiras em Alagoas</h3>
           <p>Todo mês estamos nas feiras da SEMEDE, do HU (Hospital Universitário) e do TRT, em Maceió. Chame no WhatsApp pra saber onde estaremos nesta semana.</p>
@@ -228,22 +258,7 @@
           <h3>Feiras itinerantes</h3>
           <p>De tempos em tempos, levamos a Da Terra para feiras em outros estados. Já estivemos no Rio de Janeiro, Bahia e Pernambuco.</p>
         </div>
-        <div class="find-card find-card-wide">
-          <h3>Pontos de revenda</h3>
-          <p>Encontre a Da Terra à venda nestes estabelecimentos parceiros:</p>
-          <ul class="partner-list">
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Rua%20Am%C3%A9lia%20Rosa%2C%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Ferreti Jatiúca (matriz) no Google Maps">Ferreti Jatiúca (matriz)<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> <a href="https://www.instagram.com/ferretipanificacao/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Ferreti Jatiúca (matriz) (@ferretipanificacao)"><svg aria-hidden="true" focusable="false" width="16" height="16"><use href="#icon-instagram"/></svg></a></li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Avenida%20Deputado%20Jos%C3%A9%20Lages%2C%20Ponta%20Verde%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Ferreti Ponta Verde no Google Maps">Ferreti Ponta Verde<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> <a href="https://www.instagram.com/ferretipanificacao/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Ferreti Ponta Verde (@ferretipanificacao)"><svg aria-hidden="true" focusable="false" width="16" height="16"><use href="#icon-instagram"/></svg></a></li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Panifica%C3%A7%C3%A3o%20Almeida%2C%20Avenida%20Rotary%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Panificação Almeida no Google Maps">Panificação Almeida<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> (Av. Rotary)</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Cesta%20de%20Complementos%2C%20Gruta%20de%20Lourdes%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Cesta de Complementos no Google Maps">Cesta de Complementos<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> (Gruta de Lourdes)</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Alagoas%20Mais%20Cooperativa%2C%20Mercado%2031%2C%20Jaragu%C3%A1%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Mercado 31, loja Alagoas Mais Cooperativa no Google Maps">Mercado 31, loja Alagoas Mais Cooperativa<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> <a href="https://www.instagram.com/alagoasmaiscooperativa/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Mercado 31, loja Alagoas Mais Cooperativa (@alagoasmaiscooperativa)"><svg aria-hidden="true" focusable="false" width="16" height="16"><use href="#icon-instagram"/></svg></a> (Jaraguá)</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Emp%C3%B3rio%20da%20Praia%2C%20Praia%20do%20Franc%C3%AAs%2C%20Marechal%20Deodoro%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Empório da Praia no Google Maps">Empório da Praia<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> (Praia do Francês)</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Mercadinho%20Zero%20Grau%2C%20Praia%20do%20Franc%C3%AAs%2C%20Marechal%20Deodoro%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Mercadinho Zero Grau no Google Maps">Mercadinho Zero Grau<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> (Praia do Francês)</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Alagoas%20Mais%20Cooperativa%2C%20Partage%20Shopping%20Arapiraca%2C%20Arapiraca%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Partage Shopping, loja Alagoas Mais Cooperativa no Google Maps">Partage Shopping, loja Alagoas Mais Cooperativa<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> <a href="https://www.instagram.com/alagoasmaiscooperativa/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Partage Shopping, loja Alagoas Mais Cooperativa (@alagoasmaiscooperativa)"><svg aria-hidden="true" focusable="false" width="16" height="16"><use href="#icon-instagram"/></svg></a> (Arapiraca)</li>
-            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20da%20Castanha%2C%20Coruripe%20-%20AL" target="_blank" rel="noopener" class="partner-link" aria-label="Casa da Castanha no Google Maps">Casa da Castanha<svg aria-hidden="true" focusable="false" width="15" height="15"><use href="#icon-pin"/></svg></a> (Coruripe)</li>
-          </ul>
-        </div>
-        <div class="find-card find-card-wide">
+        <div class="find-card">
           <h3>Parceiros gastronômicos</h3>
           <p>Quem usa a Da Terra em pratos assinados:</p>
           <ul class="partner-list">
@@ -256,48 +271,49 @@
       <div class="partner-map">
         <div class="partner-map-list">
           <h3>Onde comprar: veja no mapa</h3>
-          <p>Toque num ponto de venda pra ver onde fica.</p>
+          <p>Toque num ponto de venda ou feira pra ver onde fica. O ícone do Instagram abre o perfil da loja.</p>
           <h4>Maceió</h4>
           <ul class="map-places">
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Rua%20Am%C3%A9lia%20Rosa%2C%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL" data-query="Ferreti, Rua Amélia Rosa, Jatiúca, Maceió - AL" aria-pressed="true" target="_blank" rel="noopener" title="Rua Amélia Rosa"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Ferreti Jatiúca (matriz)</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Avenida%20Deputado%20Jos%C3%A9%20Lages%2C%20Ponta%20Verde%2C%20Macei%C3%B3%20-%20AL" data-query="Ferreti, Avenida Deputado José Lages, Ponta Verde, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Av. Deputado José Lages"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Ferreti Ponta Verde</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Panifica%C3%A7%C3%A3o%20Almeida%2C%20Avenida%20Rotary%2C%20Macei%C3%B3%20-%20AL" data-query="Panificação Almeida, Avenida Rotary, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Av. Rotary"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Panificação Almeida</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Cesta%20de%20Complementos%2C%20Gruta%20de%20Lourdes%2C%20Macei%C3%B3%20-%20AL" data-query="Cesta de Complementos, Gruta de Lourdes, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Gruta de Lourdes"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Cesta de Complementos</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Rose%20Gastronomia%2C%20Cruz%20das%20Almas%2C%20Macei%C3%B3%20-%20AL" data-query="Rose Gastronomia, Cruz das Almas, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Cruz das Almas"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Rose Gastronomia</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Alagoas%20Mais%20Cooperativa%2C%20Mercado%2031%2C%20Jaragu%C3%A1%2C%20Macei%C3%B3%20-%20AL" data-query="Alagoas Mais Cooperativa, Mercado 31, Jaraguá, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Jaraguá, loja Alagoas Mais Cooperativa"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Mercado 31</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Rua%20Am%C3%A9lia%20Rosa%2C%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL" data-query="Ferreti, Rua Amélia Rosa, Jatiúca, Maceió - AL" aria-current="true" target="_blank" rel="noopener" title="Rua Amélia Rosa"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Ferreti Jatiúca (matriz)</a><a href="https://www.instagram.com/ferretipanificacao/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Ferreti Jatiúca (matriz) (@ferretipanificacao)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-instagram"/></svg></a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Avenida%20Deputado%20Jos%C3%A9%20Lages%2C%20Ponta%20Verde%2C%20Macei%C3%B3%20-%20AL" data-query="Ferreti, Avenida Deputado José Lages, Ponta Verde, Maceió - AL" target="_blank" rel="noopener" title="Av. Deputado José Lages"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Ferreti Ponta Verde</a><a href="https://www.instagram.com/ferretipanificacao/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Ferreti Ponta Verde (@ferretipanificacao)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-instagram"/></svg></a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Panifica%C3%A7%C3%A3o%20Almeida%2C%20Avenida%20Rotary%2C%20Macei%C3%B3%20-%20AL" data-query="Panificação Almeida, Avenida Rotary, Maceió - AL" target="_blank" rel="noopener" title="Av. Rotary"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Panificação Almeida</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Cesta%20de%20Complementos%2C%20Gruta%20de%20Lourdes%2C%20Macei%C3%B3%20-%20AL" data-query="Cesta de Complementos, Gruta de Lourdes, Maceió - AL" target="_blank" rel="noopener" title="Gruta de Lourdes"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Cesta de Complementos</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Rose%20Gastronomia%2C%20Cruz%20das%20Almas%2C%20Macei%C3%B3%20-%20AL" data-query="Rose Gastronomia, Cruz das Almas, Maceió - AL" target="_blank" rel="noopener" title="Cruz das Almas"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Rose Gastronomia</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Alagoas%20Mais%20Cooperativa%2C%20Mercado%2031%2C%20Jaragu%C3%A1%2C%20Macei%C3%B3%20-%20AL" data-query="Alagoas Mais Cooperativa, Mercado 31, Jaraguá, Maceió - AL" target="_blank" rel="noopener" title="Jaraguá, loja Alagoas Mais Cooperativa"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Mercado 31</a><a href="https://www.instagram.com/alagoasmaiscooperativa/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Mercado 31 (@alagoasmaiscooperativa)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-instagram"/></svg></a></li>
           </ul>
           <h4>Praia do Francês</h4>
           <ul class="map-places">
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Emp%C3%B3rio%20da%20Praia%2C%20Praia%20do%20Franc%C3%AAs%2C%20Marechal%20Deodoro%20-%20AL" data-query="Empório da Praia, Praia do Francês, Marechal Deodoro - AL" aria-pressed="false" target="_blank" rel="noopener" title="Praia do Francês"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Empório da Praia</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Mercadinho%20Zero%20Grau%2C%20Praia%20do%20Franc%C3%AAs%2C%20Marechal%20Deodoro%20-%20AL" data-query="Mercadinho Zero Grau, Praia do Francês, Marechal Deodoro - AL" aria-pressed="false" target="_blank" rel="noopener" title="Praia do Francês"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Mercadinho Zero Grau</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Emp%C3%B3rio%20da%20Praia%2C%20Praia%20do%20Franc%C3%AAs%2C%20Marechal%20Deodoro%20-%20AL" data-query="Empório da Praia, Praia do Francês, Marechal Deodoro - AL" target="_blank" rel="noopener" title="Praia do Francês"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Empório da Praia</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Mercadinho%20Zero%20Grau%2C%20Praia%20do%20Franc%C3%AAs%2C%20Marechal%20Deodoro%20-%20AL" data-query="Mercadinho Zero Grau, Praia do Francês, Marechal Deodoro - AL" target="_blank" rel="noopener" title="Praia do Francês"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Mercadinho Zero Grau</a></li>
           </ul>
           <h4>Arapiraca</h4>
           <ul class="map-places">
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Alagoas%20Mais%20Cooperativa%2C%20Partage%20Shopping%20Arapiraca%2C%20Arapiraca%20-%20AL" data-query="Alagoas Mais Cooperativa, Partage Shopping Arapiraca, Arapiraca - AL" aria-pressed="false" target="_blank" rel="noopener" title="Loja Alagoas Mais Cooperativa"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Partage Shopping</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Alagoas%20Mais%20Cooperativa%2C%20Partage%20Shopping%20Arapiraca%2C%20Arapiraca%20-%20AL" data-query="Alagoas Mais Cooperativa, Partage Shopping Arapiraca, Arapiraca - AL" target="_blank" rel="noopener" title="Loja Alagoas Mais Cooperativa"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Partage Shopping</a><a href="https://www.instagram.com/alagoasmaiscooperativa/" target="_blank" rel="noopener" class="partner-ig" aria-label="Instagram de Partage Shopping (@alagoasmaiscooperativa)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-instagram"/></svg></a></li>
           </ul>
           <h4>Coruripe</h4>
           <ul class="map-places">
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20da%20Castanha%2C%20Coruripe%20-%20AL" data-query="Casa da Castanha, Coruripe - AL" aria-pressed="false" target="_blank" rel="noopener" title="Coruripe"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Casa da Castanha</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Casa%20da%20Castanha%2C%20Coruripe%20-%20AL" data-query="Casa da Castanha, Coruripe - AL" target="_blank" rel="noopener" title="Coruripe"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>Casa da Castanha</a></li>
           </ul>
           <h4>Feiras mensais em Maceió</h4>
           <ul class="map-places">
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=SEMEDE%20Secretaria%20Municipal%20de%20Educa%C3%A7%C3%A3o%2C%20Macei%C3%B3%20-%20AL" data-query="SEMEDE Secretaria Municipal de Educação, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Feira mensal"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>SEMEDE</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20Universit%C3%A1rio%20Professor%20Alberto%20Antunes%2C%20Macei%C3%B3%20-%20AL" data-query="Hospital Universitário Professor Alberto Antunes, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Feira mensal"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>HU, Hospital Universitário</a></li>
-            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Tribunal%20Regional%20do%20Trabalho%2019%C2%AA%20Regi%C3%A3o%2C%20Macei%C3%B3%20-%20AL" data-query="Tribunal Regional do Trabalho 19ª Região, Maceió - AL" aria-pressed="false" target="_blank" rel="noopener" title="Feira mensal"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>TRT Maceió</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=SEMEDE%20Secretaria%20Municipal%20de%20Educa%C3%A7%C3%A3o%2C%20Macei%C3%B3%20-%20AL" data-query="SEMEDE Secretaria Municipal de Educação, Maceió - AL" target="_blank" rel="noopener" title="Feira mensal"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>SEMEDE</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20Universit%C3%A1rio%20Professor%20Alberto%20Antunes%2C%20Macei%C3%B3%20-%20AL" data-query="Hospital Universitário Professor Alberto Antunes, Maceió - AL" target="_blank" rel="noopener" title="Feira mensal"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>HU, Hospital Universitário</a></li>
+            <li><a class="map-place" href="https://www.google.com/maps/search/?api=1&amp;query=Tribunal%20Regional%20do%20Trabalho%2019%C2%AA%20Regi%C3%A3o%2C%20Macei%C3%B3%20-%20AL" data-query="Tribunal Regional do Trabalho 19ª Região, Maceió - AL" target="_blank" rel="noopener" title="Feira mensal"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="#icon-pin"/></svg>TRT Maceió</a></li>
           </ul>
         </div>
         <div class="partner-map-frame">
-          <iframe id="partnerMap" src="https://www.google.com/maps?q=Ferreti%2C%20Rua%20Am%C3%A9lia%20Rosa%2C%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL&amp;output=embed" title="Mapa dos parceiros da Da Terra" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <iframe id="partnerMap" src="https://www.google.com/maps?q=Ferreti%2C%20Rua%20Am%C3%A9lia%20Rosa%2C%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL&amp;output=embed" title="Mapa dos pontos de venda da Da Terra" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="map-open" id="mapOpen" href="https://www.google.com/maps/search/?api=1&amp;query=Ferreti%2C%20Rua%20Am%C3%A9lia%20Rosa%2C%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL" target="_blank" rel="noopener">Abrir no Google Maps<svg aria-hidden="true" focusable="false" width="16" height="16"><use href="#icon-pin"/></svg></a>
         </div>
       </div>
 
       <div class="partner-gallery">
         <p class="eyebrow center">Nos pratos dos nossos parceiros</p>
         <h3 class="center">Também presente em cardápios assinados</h3>
-        <div class="gallery-grid">
-          <img src="imagens/parceiro-prato-1.jpg" alt="Prato gourmet com chips de banana Da Terra em restaurante parceiro" loading="lazy" width="1066" height="1600">
-          <img src="imagens/parceiro-prato-2.jpg" alt="Prato com frango empanado e chips de banana Da Terra em restaurante parceiro" loading="lazy" width="1200" height="1600">
-          <img src="imagens/parceiro-prato-3.jpg" alt="Chips de banana Da Terra servidos em buffet de evento parceiro" loading="lazy" width="912" height="1600">
+        <div class="gallery-grid" tabindex="0" role="region" aria-label="Fotos dos pratos dos parceiros">
+          <img src="imagens/parceiro-prato-1-600.webp" srcset="imagens/parceiro-prato-1-600.webp 600w, imagens/parceiro-prato-1-1000.webp 1000w" sizes="(max-width: 520px) 78vw, (max-width: 900px) 50vw, 410px" alt="Prato gourmet com chips de banana Da Terra em restaurante parceiro" loading="lazy" width="1000" height="1501">
+          <img src="imagens/parceiro-prato-2-600.webp" srcset="imagens/parceiro-prato-2-600.webp 600w, imagens/parceiro-prato-2-1000.webp 1000w" sizes="(max-width: 520px) 78vw, (max-width: 900px) 50vw, 410px" alt="Prato com frango empanado e chips de banana Da Terra em restaurante parceiro" loading="lazy" width="1000" height="1333">
+          <img src="imagens/parceiro-prato-3-600.webp" srcset="imagens/parceiro-prato-3-600.webp 600w, imagens/parceiro-prato-3-1000.webp 912w" sizes="(max-width: 520px) 78vw, (max-width: 900px) 50vw, 410px" alt="Chips de banana Da Terra servidos em buffet de evento parceiro" loading="lazy" width="912" height="1600">
         </div>
       </div>
     </div>
@@ -377,6 +393,7 @@
 
 </main>
 
+<aside aria-label="Atalho do WhatsApp">
 <a
   href="https://wa.me/5582981177313?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20queria%20saber%20mais%20sobre%20os%20chips%20de%20banana."
   class="whatsapp-fab"
@@ -386,6 +403,7 @@
   <svg aria-hidden="true" focusable="false" width="28" height="28"><use href="#icon-whatsapp"/></svg>
   <span class="whatsapp-fab-label">Fale no WhatsApp</span>
 </a>
+</aside>
 
 <footer class="footer">
   <div class="footer-inner">
@@ -414,6 +432,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>
