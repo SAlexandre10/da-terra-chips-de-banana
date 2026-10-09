@@ -711,7 +711,6 @@ strong { color: var(--brown-dark); }
 }
 
 .contact-link:hover { color: var(--green-dark); }
-.contact-item:hover { color: var(--text-soft); }
 
 .social-icon {
   display: inline-flex;
@@ -727,7 +726,7 @@ strong { color: var(--brown-dark); }
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
 
-.contact-link:not(.contact-item):hover .social-icon {
+.contact-link:hover .social-icon {
   transform: translateY(-3px) scale(1.06);
   box-shadow: var(--shadow);
 }
