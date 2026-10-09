@@ -110,7 +110,7 @@ document.querySelectorAll('.product-photo').forEach((img) => {
 // Formulário de contato: encaminha para o WhatsApp da Da Terra
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-const WHATSAPP_NUMBER = '5582996177313';
+const WHATSAPP_NUMBER = '5582981177313';
 
 form?.addEventListener('submit', (e) => {
   e.preventDefault();
