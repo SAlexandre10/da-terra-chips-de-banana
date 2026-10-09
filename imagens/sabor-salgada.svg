@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 4 76 80">
+  <defs>
+    <radialGradient id="c1" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#FCE3A0"/><stop offset="1" stop-color="#F2C255"/></radialGradient>
+    <radialGradient id="c2" cx="0.45" cy="0.4" r="0.7"><stop offset="0" stop-color="#FBE09A"/><stop offset="1" stop-color="#EDB847"/></radialGradient>
+  </defs>
+<g transform="rotate(-12 36 58)">
+    <ellipse cx="36" cy="60.5" rx="20" ry="15" fill="#B9780F" opacity="0.35"/>
+    <ellipse cx="36" cy="58" rx="20" ry="15" fill="#E9A92B"/>
+    <ellipse cx="36" cy="58" rx="16.8" ry="12.6" fill="url(#c2)"/>
+    <ellipse cx="31.0" cy="53.5" rx="6.4" ry="2.4" fill="#FFF6D6" opacity="0.7"/>
+    <ellipse cx="42.4" cy="58.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(90 42.4 58.0)"/><ellipse cx="40.0" cy="61.8" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(141 40.0 61.8)"/><ellipse cx="34.6" cy="62.7" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(193 34.6 62.7)"/><ellipse cx="30.2" cy="60.1" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(244 30.2 60.1)"/><ellipse cx="30.2" cy="55.9" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(296 30.2 55.9)"/><ellipse cx="34.6" cy="53.3" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(347 34.6 53.3)"/><ellipse cx="40.0" cy="54.2" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(399 40.0 54.2)"/>
+  </g><g transform="rotate(10 60 60)">
+    <ellipse cx="60" cy="62.5" rx="19" ry="14" fill="#B9780F" opacity="0.35"/>
+    <ellipse cx="60" cy="60" rx="19" ry="14" fill="#E9A92B"/>
+    <ellipse cx="60" cy="60" rx="15.959999999999999" ry="11.76" fill="url(#c2)"/>
+    <ellipse cx="55.25" cy="55.8" rx="6.08" ry="2.24" fill="#FFF6D6" opacity="0.7"/>
+    <ellipse cx="66.1" cy="60.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(90 66.1 60.0)"/><ellipse cx="63.8" cy="63.5" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(141 63.8 63.5)"/><ellipse cx="58.6" cy="64.4" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(193 58.6 64.4)"/><ellipse cx="54.5" cy="61.9" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(244 54.5 61.9)"/><ellipse cx="54.5" cy="58.1" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(296 54.5 58.1)"/><ellipse cx="58.6" cy="55.6" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(347 58.6 55.6)"/><ellipse cx="63.8" cy="56.5" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(399 63.8 56.5)"/>
+  </g><g transform="rotate(-4 48 46)">
+    <ellipse cx="48" cy="48.5" rx="21" ry="16" fill="#B9780F" opacity="0.35"/>
+    <ellipse cx="48" cy="46" rx="21" ry="16" fill="#E9A92B"/>
+    <ellipse cx="48" cy="46" rx="17.64" ry="13.44" fill="url(#c1)"/>
+    <ellipse cx="42.75" cy="41.2" rx="6.72" ry="2.56" fill="#FFF6D6" opacity="0.7"/>
+    <ellipse cx="54.7" cy="46.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(90 54.7 46.0)"/><ellipse cx="52.2" cy="50.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(141 52.2 50.0)"/><ellipse cx="46.5" cy="51.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(193 46.5 51.0)"/><ellipse cx="41.9" cy="48.2" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(244 41.9 48.2)"/><ellipse cx="41.9" cy="43.8" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(296 41.9 43.8)"/><ellipse cx="46.5" cy="41.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(347 46.5 41.0)"/><ellipse cx="52.2" cy="42.0" rx="1.3" ry="2" fill="#8A5A1E" opacity="0.75" transform="rotate(399 52.2 42.0)"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#C9B896" stroke-width="0.6">
+    <rect x="30" y="20" width="4.5" height="4.5" rx="0.8" transform="rotate(20 32 22)"/>
+    <rect x="42" y="14" width="4" height="4" rx="0.8" transform="rotate(-15 44 16)"/>
+    <rect x="56" y="22" width="4.5" height="4.5" rx="0.8" transform="rotate(35 58 24)"/>
+    <rect x="66" y="16" width="3.5" height="3.5" rx="0.7"/>
+    <rect x="47" y="27" width="3.5" height="3.5" rx="0.7" transform="rotate(10 49 29)"/>
+    <rect x="22" y="30" width="3.2" height="3.2" rx="0.6" transform="rotate(-25 23 31)"/>
+  </g>
+</svg>
