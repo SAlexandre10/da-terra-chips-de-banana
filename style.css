@@ -129,10 +129,8 @@ button:focus-visible {
 strong { color: var(--brown-dark); }
 
 .highlight {
-  background: linear-gradient(180deg, transparent 58%, var(--yellow) 58%);
   font-weight: 800;
   color: var(--brown-dark);
-  padding: 0 2px;
 }
 
 .eyebrow {
