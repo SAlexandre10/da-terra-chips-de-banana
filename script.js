@@ -145,6 +145,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Mapa dos parceiros: tocar num parceiro mostra o local no mapa
 const partnerMap = document.getElementById('partnerMap');
+const mapOpen = document.getElementById('mapOpen');
 const mapPlaces = document.querySelectorAll('.map-place');
 
 if (partnerMap) {
@@ -152,7 +153,11 @@ if (partnerMap) {
     place.addEventListener('click', (e) => {
       e.preventDefault();
       partnerMap.src = 'https://www.google.com/maps?q=' + encodeURIComponent(place.dataset.query) + '&output=embed';
-      mapPlaces.forEach((p) => p.setAttribute('aria-pressed', p === place ? 'true' : 'false'));
+      if (mapOpen) mapOpen.href = place.href;
+      mapPlaces.forEach((p) => {
+        if (p === place) p.setAttribute('aria-current', 'true');
+        else p.removeAttribute('aria-current');
+      });
     });
   });
 }
