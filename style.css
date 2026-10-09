@@ -926,9 +926,7 @@ strong { color: var(--brown-dark); }
 
 /* Partner links */
 .partner-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: inline;
   color: var(--green-dark);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--green) 45%, transparent);
@@ -936,8 +934,20 @@ strong { color: var(--brown-dark); }
   transition: color 0.2s, text-decoration-color 0.2s;
 }
 
-.partner-link svg { flex-shrink: 0; opacity: 0.85; }
+.partner-link svg { display: inline-block; vertical-align: -2px; margin-left: 5px; opacity: 0.85; }
 .partner-link:hover { color: var(--yellow-dark); text-decoration-color: currentColor; }
+
+.partner-ig {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 4px;
+  padding: 3px;
+  border-radius: 6px;
+  color: var(--text-soft);
+  transition: color 0.2s, background 0.2s;
+}
+
+.partner-ig:hover { color: var(--green-dark); background: var(--cream-alt); }
 
 /* Footer */
 .footer {
