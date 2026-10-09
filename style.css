@@ -829,6 +829,40 @@ strong { color: var(--brown-dark); }
   }
 }
 
+/* Reviews */
+.section-reviews { background: var(--cream); }
+
+.review-stars {
+  display: flex;
+  gap: 6px;
+  margin: 0.6em 0 1.4em;
+}
+
+.review-stars a {
+  color: var(--yellow);
+  display: inline-flex;
+  transition: transform 0.2s var(--ease), color 0.2s;
+}
+
+.review-stars:hover a { color: var(--yellow-dark); }
+.review-stars a:hover ~ a { color: var(--input-border); }
+.review-stars a:hover { transform: scale(1.15); }
+
+.review-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--card-border);
+  background: var(--surface);
+}
+
+.review-map iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
+
 /* Footer */
 .footer {
   background: linear-gradient(160deg, #402710 0%, #211307 100%);
@@ -921,6 +955,7 @@ strong { color: var(--brown-dark); }
 
   /* No celular/tablet o texto das seções fica centralizado, como o hero */
   .split-text { text-align: center; }
+  .review-stars { justify-content: center; }
   .split-text .checklist,
   .split-text .contact-list { display: inline-block; text-align: left; margin-left: auto; margin-right: auto; }
   .stat-row { justify-items: center; }
